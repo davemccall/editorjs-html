@@ -10,7 +10,7 @@ type parser = {
 };
 
 const parser = (plugins = {}): parser => {
-  const parsers = Object.assign({}, transforms, plugins);
+  const parsers = Object.assign({}, plugins, transforms);
 
   return {
     parse: ({ blocks }) => {
